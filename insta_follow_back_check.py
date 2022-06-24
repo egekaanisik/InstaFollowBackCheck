@@ -2,6 +2,7 @@ import os
 import sys
 import platform
 
+# Dependency list
 DEPENDENCIES = ["Instagrapi", "PWInput"]
 
 # Dependency installer contraints
@@ -33,7 +34,7 @@ try:
     cl.login(username, password, verification_code=oauth)
 
     # Get the user ID
-    user_id = cl.user_id_from_username(username)
+    user_id = cl.user_id
     print("Your User ID: {}".format(user_id))
 
     # Get followed accounts
@@ -50,7 +51,7 @@ except Exception as e:
     input("Press Enter to terminate.")
     sys.exit(1)
 
-# Extract only the usernames on both ffollowed accounts and followers
+# Extract only the usernames on both followed accounts and followers
 followings_usernames = [i.username for i in followings.values()]
 followers_usernames = [i.username for i in followers.values()]
 
