@@ -2,9 +2,11 @@ import os
 import sys
 import platform
 
+DEPENDENCIES = ["Instagrapi", "PWInput"]
+
 # Dependency installer contraints
 INSTALLER_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "modules", "install_dependencies.py")
-INSTALLER = '"' + INSTALLER_DIR + '" Instagrapi'
+INSTALLER = '"' + INSTALLER_DIR + '" ' + " ".join(DEPENDENCIES)
 
 # Start the installer, if fails, terminate
 if os.system(INSTALLER):
@@ -16,10 +18,11 @@ if os.system(INSTALLER):
 os.system('cls' if platform.system() == "Windows" else 'clear')
 
 from instagrapi import Client
+from pwinput import pwinput
 
 # Get user information
 username = input("Username: ").strip()
-password = input("Password: ").strip()
+password = pwinput()
 oauth = input("2FA Code (if not exists, leave blank): ").strip()
 print()
 
