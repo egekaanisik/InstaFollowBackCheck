@@ -68,10 +68,7 @@ print("\nAccounts that do not follow you back:")
 print("\n".join(not_following))
 
 # Get the path for results
-if platform.system() == "Windows":
-    path = os.path.join(os.environ["HOMEPATH"], "Desktop", "accounts_dont_follow_back.txt")
-else:
-    path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop', "accounts_dont_follow_back.txt")
+path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop', "accounts_dont_follow_back.txt")
 
 # Open the file and write the results into it
 with open(path, "w") as file:
