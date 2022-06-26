@@ -1,0 +1,2 @@
+instagrapi==1.16.20
+pwinput==1.0.2
