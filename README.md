@@ -14,6 +14,9 @@ Executables can be found under the "executables" folder. If you use executables,
 #### Windows
 Application can be run directly via double-clicking.
 
+#### macOS
+Like Windows, you can run the application by double-clicking.
+
 #### Linux
 To run the application, open folder in terminal and run the following command:
 ```
