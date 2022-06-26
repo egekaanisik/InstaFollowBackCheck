@@ -9,7 +9,7 @@ Find the Instagram accounts that do not follow you back.
 ## Usage
 
 ### Executable
-Executables can be found under the "exe" folder. If you use executables, you don't have to install any dependencies.
+Executables can be found under the "executables" folder. If you use executables, you don't have to install any dependencies.
 
 #### Windows
 Application can be run directly via double-clicking.
