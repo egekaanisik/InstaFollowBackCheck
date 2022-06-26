@@ -43,5 +43,5 @@ After the installation process, you have to enter your Instagram credentials to 
 
 *NOTE: If you receive an email about a login attempt from an unrecognized device (for example Xiaomi Mi 5s), do not panic. The user agent that Instagrapi provides is different than your device. Also, do not run the script back to back. Instagram may see it as suspicious activity and temporarily lock your account.
 
-PS. To login, either Two-Factor-Authenticator via auth app has to be enabled or 2FA has to be disabled.
+PS. To login, either Two-Factor-Authentication via auth app has to be enabled or 2FA has to be disabled.
 
