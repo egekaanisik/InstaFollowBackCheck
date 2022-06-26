@@ -8,8 +8,17 @@ Find the Instagram accounts that do not follow you back.
 
 ## Usage
 
-### Executable (Windows)
-Application can be run directly via the executable file under the exe folder. You don't need to install any of the dependencies.
+### Executable
+Executables can be found under the "exe" folder. If you use executables, you don't have to install any dependencies.
+
+#### Windows
+Application can be run directly via double-clicking.
+
+#### Linux
+To run the application, open folder in terminal and run the following command:
+```
+./InstaFollowBackCheck
+```
 
 ### Source Code
 First, install the required modules (check requirements.txt).
@@ -17,7 +26,7 @@ First, install the required modules (check requirements.txt).
 #### Installation
 Dependencies can be installed via the following command:
 ```
-python -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 After the installation process, you have to enter your Instagram credentials to get followed accounts and followers.* The results are printed and saved to a file on your desktop.
