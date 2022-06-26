@@ -50,11 +50,16 @@ print("\nAccounts that do not follow you back:")
 print("\n".join(not_following))
 
 # Get the path for results
-path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop', "accounts_dont_follow_back.txt")
+path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop', "{}_accounts_dont_follow_back.html".format(username))
+
+# Fill an HTML body with the not following users and their Instagram profile links
+html = ""
+for i in not_following:
+    html += '<a href="https://instagram.com/{}">{}</a><br>'.format(i, i)
 
 # Open the file and write the results into it
 with open(path, "w") as file:
-    file.write("\n".join(not_following))
+    file.write(html)
 
 # Print the path and terminate
 print("\nResults are saved to {}.".format(path))
