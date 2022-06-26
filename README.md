@@ -18,7 +18,10 @@ Application can be run directly via double-clicking.
 Like Windows, you can run the application by double-clicking.
 
 #### Linux
-To run the application, open folder in terminal and run the following command:
+To run the application, open folder in terminal and run the following commands:
+```
+chmod +x InstaFollowBackCheck
+```
 ```
 ./InstaFollowBackCheck
 ```
