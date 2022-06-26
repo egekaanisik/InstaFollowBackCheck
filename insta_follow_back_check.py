@@ -1,23 +1,5 @@
 import os
 import sys
-import platform
-
-# Dependency list
-DEPENDENCIES = ["Instagrapi", "PWInput"]
-
-# Dependency installer contraints
-INSTALLER_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "modules", "install_dependencies.py")
-INSTALLER = '"' + INSTALLER_DIR + '" ' + " ".join(DEPENDENCIES)
-
-# Start the installer, if fails, terminate
-if os.system(INSTALLER):
-    print("Required modules are not installed.")
-    input("Press Enter to terminate.")
-    sys.exit(1)
-
-# Clear the terminal
-os.system('cls' if platform.system() == "Windows" else 'clear')
-
 from instagrapi import Client
 from pwinput import pwinput
 
