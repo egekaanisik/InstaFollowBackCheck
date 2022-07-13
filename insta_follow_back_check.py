@@ -45,7 +45,15 @@ try:
     followers = cl.user_followers(user_id)
     print("Got {} followers.".format(len(followers)))
 except Exception as e:
-    print(str(e))
+    # Print the exception message
+    print("An exception occured: {}".format(str(e)))
+
+    # Delete account dump to prevent login issues
+    if os.path.exists(DUMP):
+        os.remove(DUMP)
+        print("Account dump is deleted to prevent login issues.")
+
+    # Terminate
     input("Press Enter to terminate.")
     sys.exit(1)
 
