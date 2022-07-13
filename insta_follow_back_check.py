@@ -2,6 +2,7 @@ import os
 import sys
 from instagrapi import Client
 from pwinput import pwinput
+from tempfile import gettempdir
 
 # Get user information
 username = input("Username: ").strip()
@@ -9,12 +10,27 @@ password = pwinput()
 oauth = input("2FA Code (if not exists, leave blank): ").strip()
 print()
 
+# Account settings dump path
+DUMP = os.path.join(gettempdir(), "{}_account_dump.json".format(username))
+
 # Try to login and get account details, if fails, terminate
 try:
-    # Create the client and login
+    # Create the client
     cl = Client()
+
+    # If there is a dump for the account, load settings
+    if os.path.exists(DUMP):
+        cl.load_settings(DUMP)
+        print("Loaded account settings from dump.")
+
+    # Login
     cl.login(username, password, verification_code=oauth)
 
+    # If there is not a dump for the account, dump settings
+    if not os.path.exists(DUMP):
+        cl.dump_settings(DUMP)
+        print("Dumped account settings to temp directory.")
+    
     # Get the user ID
     user_id = cl.user_id
     print("Your User ID: {}".format(user_id))
