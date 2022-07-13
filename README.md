@@ -15,10 +15,14 @@ Executables can be found under the "executables" folder. If you use executables,
 Application can be run directly via double-clicking.
 
 #### macOS
-Like Windows, you can run the application by double-clicking.
+In order to open the application, open folder in terminal and run the following command to give execution permission to the file:
+```
+chmod +x InstaFollowBackCheck
+```
+After giving the permission, you can run the application by double-clicking.
 
 #### Linux
-To run the application, open folder in terminal and run the following commands:
+As in macOS, to run the application, open folder in terminal and run the following commands:
 ```
 chmod +x InstaFollowBackCheck
 ```
@@ -38,3 +42,6 @@ pip install -r requirements.txt
 After the installation process, you have to enter your Instagram credentials to get followed accounts and followers.* The results are printed and saved to a file on your desktop.
 
 *NOTE: If you receive an email about a login attempt from an unrecognized device (for example Xiaomi Mi 5s), do not panic. The user agent that Instagrapi provides is different than your device. Also, do not run the script back to back. Instagram may see it as suspicious activity and temporarily lock your account.
+
+PS. To login, either Two-Factor-Authentication via auth app has to be enabled or 2FA has to be disabled.
+
