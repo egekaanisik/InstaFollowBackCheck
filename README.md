@@ -2,9 +2,10 @@
 Find the Instagram accounts that do not follow you back.
 
 ## Dependencies
-* Python >= 3.6, recommend 3.8+
+* Python >= 3.7, recommend 3.8+
 * Instagrapi
 * PWInput
+* Pillow
 
 ## Usage
 First, install the required modules (check requirements.txt).
